@@ -1,0 +1,18 @@
+<div class="container">
+  <%= form_for(@task) do |f| %>
+  <div class="form-group row">
+  <h1>Create a new task</h1>
+    <div class="col-lg-10">
+      <%= f.label :name %>
+      <%= f.text_field :name, placeholder: "clean the toilet" %>
+    </div>
+  </div>
+  <div class="radio row">
+    <div class="col-lg-10">
+      <%= f.radio_button :done, 'yes', checked: true %> done
+      <%= f.radio_button :done, 'no', checked: false %> not done
+    </div>
+  </div>
+  <%= f.submit class: "btn btn-primary" %>
+  <% end %>
+</div>

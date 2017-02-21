@@ -1,0 +1,8 @@
+<h1><%= @task.name.capitalize %></h1>
+<% if @task.done == false %>
+  <p>This task is not done</p>
+<% else %>
+  <p>This task is done</p>
+<% end %>
+
+<%= link_to "Go back", tasks_path %>
